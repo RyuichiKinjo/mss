@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $test = 'aaa';
+        return view('home', compact('test'));
+    }
+
+    public function search()
+    {
+        $test = 'bbb';
+        return view('home', compact('test'));
     }
 }
