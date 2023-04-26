@@ -1,0 +1,10 @@
+/* テーブルのストライプを２行ごとに変更 */
+.table-double-striped>tbody>tr:nth-of-type(4n+1)
+, .table-double-striped>tbody>tr:nth-of-type(4n+2)
+{
+  background-color: #e9ecef;
+}
+
+.rdo-btn-pad-top {
+  padding-top: 31.047px;
+}
