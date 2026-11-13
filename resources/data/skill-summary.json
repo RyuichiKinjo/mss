@@ -1,0 +1,144 @@
+{
+  "private": {
+    "label": "プライベートでの使用技術",
+    "groups": [
+      {
+        "label": "言語 / フレームワーク",
+        "skills": [
+          {
+            "name": "Next.js"
+          },
+          {
+            "name": "Astro"
+          },
+          {
+            "name": "TypeScript"
+          },
+          {
+            "name": "Tailwind CSS"
+          }
+        ]
+      },
+      {
+        "label": "ツール",
+        "skills": [
+          {
+            "name": "Cursor"
+          },
+          {
+            "name": "GitHub"
+          },
+          {
+            "name": "Vercel"
+          }
+        ]
+      }
+    ]
+  },
+  "business": {
+    "label": "業務での使用技術",
+    "groups": [
+      {
+        "label": "言語",
+        "skills": [
+          {
+            "name": "JavaScript / TypeScript",
+            "level": "Advanced"
+          },
+          {
+            "name": "PHP",
+            "level": "Intermediate"
+          },
+          {
+            "name": "SQL / PL/SQL",
+            "level": "Expert"
+          },
+          {
+            "name": "VBA",
+            "level": "Intermediate"
+          },
+          {
+            "name": "C#.NET / VB.NET",
+            "level": "Intermediate"
+          },
+          {
+            "name": "Java",
+            "level": "Expert"
+          }
+        ]
+      },
+      {
+        "label": "フレームワーク",
+        "skills": [
+          {
+            "name": "Spring / Spring Boot",
+            "area": "Backend"
+          },
+          {
+            "name": "Struts / Struts2",
+            "area": "Backend"
+          },
+          {
+            "name": "Laravel",
+            "area": "Backend"
+          },
+          {
+            "name": "Angular",
+            "area": "Frontend"
+          },
+          {
+            "name": "jQuery",
+            "area": "Frontend"
+          },
+          {
+            "name": "TERASOLUNA",
+            "area": "Framework"
+          },
+          {
+            "name": "楽々FW",
+            "area": "Framework"
+          }
+        ]
+      },
+      {
+        "label": "データベース",
+        "skills": [
+          {
+            "name": "Oracle Database (9i / 10g / 11g / 12c)"
+          },
+          {
+            "name": "DB2"
+          },
+          {
+            "name": "PostgreSQL"
+          },
+          {
+            "name": "SQL Server"
+          }
+        ]
+      },
+      {
+        "label": "ツール",
+        "skills": [
+          {
+            "name": "HULFT"
+          },
+          {
+            "name": "ASTERIA WARP"
+          },
+          {
+            "name": "Salesforce"
+          }
+        ]
+      },
+      {
+        "label": "環境",
+        "skills": [
+          {
+            "name": "Windows"
+          }
+        ]
+      }
+    ]
+  }
+}
