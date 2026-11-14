@@ -33,7 +33,7 @@
         var bar = el('header', 'topbar');
         var inner = el('div', 'topbar-inner');
         var brand = el('a', 'brand', 'MY SKILL SHEETS');
-        brand.href = '/';
+        brand.href = profileDisplay.static ? './' : '/';
         var nav = el('nav', 'topnav');
         nav.setAttribute('aria-label', 'セクション');
         [
@@ -50,7 +50,7 @@
         actions.appendChild(button('スキル要約PDF', 'btn btn-ghost', 'pdf-summary'));
         if (profileDisplay.admin) {
             actions.appendChild(button('管理終了', 'btn btn-solid', 'admin-end'));
-        } else {
+        } else if (!profileDisplay.static) {
             actions.appendChild(button('管理', 'btn btn-solid', 'admin-open'));
         }
         inner.appendChild(brand);
@@ -400,11 +400,11 @@
         apply();
 
         document.getElementById('pdf-career').addEventListener('click', function () {
-            window.location.href = '/pdf/career';
+            window.location.href = profileDisplay.static ? 'pdf/MY_SKILL_SHEETS_career.pdf' : '/pdf/career';
         });
 
         document.getElementById('pdf-summary').addEventListener('click', function () {
-            window.location.href = '/pdf/summary';
+            window.location.href = profileDisplay.static ? 'pdf/MY_SKILL_SHEETS_summary.pdf' : '/pdf/summary';
         });
 
         var adminOpen = document.getElementById('admin-open');
