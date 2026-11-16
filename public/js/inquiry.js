@@ -34,6 +34,15 @@
         var inner = el('div', 'topbar-inner');
         var brand = el('a', 'brand', 'MY SKILL SHEETS');
         brand.href = profileDisplay.static ? './' : '/';
+        var toggle = button('', 'menu-toggle', 'menu-toggle');
+        toggle.setAttribute('aria-label', 'メニュー');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-controls', 'topbar-menu');
+        toggle.appendChild(el('span'));
+        toggle.appendChild(el('span'));
+        toggle.appendChild(el('span'));
+        var menu = el('div', 'topbar-menu');
+        menu.id = 'topbar-menu';
         var nav = el('nav', 'topnav');
         nav.setAttribute('aria-label', 'セクション');
         [
@@ -53,9 +62,11 @@
         } else if (!profileDisplay.static) {
             actions.appendChild(button('管理', 'btn btn-solid', 'admin-open'));
         }
+        menu.appendChild(nav);
+        menu.appendChild(actions);
         inner.appendChild(brand);
-        inner.appendChild(nav);
-        inner.appendChild(actions);
+        inner.appendChild(toggle);
+        inner.appendChild(menu);
         bar.appendChild(inner);
         return bar;
     }
@@ -398,6 +409,21 @@
 
         input.addEventListener('input', apply);
         apply();
+
+        var menuToggle = document.getElementById('menu-toggle');
+        var topbar = document.querySelector('.topbar');
+        function setMenu(open) {
+            topbar.classList.toggle('is-open', open);
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        }
+        menuToggle.addEventListener('click', function () {
+            setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
+        });
+        document.getElementById('topbar-menu').addEventListener('click', function (event) {
+            if (event.target.closest('a, button')) {
+                setMenu(false);
+            }
+        });
 
         document.getElementById('pdf-career').addEventListener('click', function () {
             window.location.href = profileDisplay.static ? 'pdf/MY_SKILL_SHEETS_career.pdf' : '/pdf/career';

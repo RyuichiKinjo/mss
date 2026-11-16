@@ -62,6 +62,36 @@ body {
     white-space: nowrap;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    padding: 10px;
+    border: 1px solid rgba(251, 247, 242, 0.45);
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    background: var(--cream);
+    border-radius: 1px;
+}
+
+.topbar-menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
 .topnav {
     display: flex;
     flex: 1;
@@ -458,6 +488,39 @@ mark {
 }
 
 @media (max-width: 900px) {
+    .menu-toggle { display: inline-flex; }
+
+    .topbar-inner { flex-wrap: wrap; }
+
+    .topbar-menu {
+        display: none;
+        flex: 1 1 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 4px 0 12px;
+    }
+
+    .topbar.is-open .topbar-menu { display: flex; }
+
+    .topnav {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 0;
+    }
+
+    .topnav a {
+        padding: 10px 4px;
+        font-size: 15px;
+    }
+
+    .topbar-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topbar-actions .btn { text-align: center; }
+
     .skill-grid { grid-template-columns: 1fr; }
 
     .projects thead { display: none; }
@@ -502,7 +565,7 @@ mark {
     .topbar-inner,
     .sheet { width: min(100% - 20px, 1120px); }
 
-    .topbar-inner { align-items: flex-start; padding: 10px 0; }
+    .topbar-inner { align-items: center; padding: 8px 0; }
 
     .profile { grid-template-columns: 1fr; gap: 2px 0; }
 
